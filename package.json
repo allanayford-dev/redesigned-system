@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "name": "redesigned-system",
+  "version": "1.0.0",
+  "description": "Redesigned Websites",
+  "main": "api/server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allanayford-dev/redesigned-system.git"
+  },
+  "keywords": [
+    "ExpressJs",
+    "ReactJs"
+  ],
+  "author": "Allan Ayford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allanayford-dev/redesigned-system/issues"
+  },
+  "homepage": "https://github.com/allanayford-dev/redesigned-system#readme"
+}
