@@ -6,7 +6,6 @@
   "version": "1.0.0",
   "description": "Redesigned Websites",
   "main": "api/server.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/allanayford-dev/redesigned-system/issues"
   },
-  "homepage": "https://github.com/allanayford-dev/redesigned-system#readme"
+  "homepage": "https://github.com/allanayford-dev/redesigned-system#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.18"
+  }
 }
