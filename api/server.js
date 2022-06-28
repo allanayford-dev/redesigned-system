@@ -1,13 +1,22 @@
-'use Strict'
 require('dotenv').config();
-//require('./config/database').connect();
+const path = require('path');
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+require('./config/db');
 
-app.get('/', (req, res) => {
-    res.send(200).json({ message: `API has been successfully created.` });
+app.use(express.static(path.join(__dirname, "../app/build")));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use('/api', require('./routes'));
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../app', 'build', 'index.html'));
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`This application is running on ${process.env.HOST}:${process.env.PORT}`)
+const port = process.env.PORT;
+
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}`);
 })
